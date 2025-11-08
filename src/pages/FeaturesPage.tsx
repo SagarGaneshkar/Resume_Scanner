@@ -1,13 +1,23 @@
-// Feature Page
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Code, Search, Terminal } from 'lucide-react';
+// Feature Pag
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Code, Search, Terminal } from "lucide-react";
 
-function FeatureCard({ icon: Icon, title, description, path }: { icon: any, title: string, description: string, path: string }) {
+function FeatureCard({
+  icon: Icon,
+  title,
+  description,
+  path,
+}: {
+  icon: any;
+  title: string;
+  description: string;
+  path: string;
+}) {
   const navigate = useNavigate();
-  
+
   return (
-    <div 
+    <div
       onClick={() => navigate(path)}
       className="card hover:shadow-xl transition-all cursor-pointer group"
     >
@@ -22,25 +32,25 @@ function FeatureCard({ icon: Icon, title, description, path }: { icon: any, titl
 
 export default function FeaturesPage() {
   const navigate = useNavigate();
-  
+
   const features = [
     {
       icon: Terminal,
-      title: 'Tech Score Analysis',
-      description: 'Evaluate your technical profile against industry standards',
-      path: '/results'
+      title: "Tech Score Analysis",
+      description: "Evaluate your technical profile against industry standards",
+      path: "/results",
     },
     {
       icon: Search,
-      title: 'Role Matcher',
-      description: 'Compare your skills with job requirements',
-      path: '/job-matcher'
+      title: "Role Matcher",
+      description: "Compare your skills with job requirements",
+      path: "/job-matcher",
     },
     {
       icon: Code,
-      title: 'Tech Opportunities',
-      description: 'Discover cutting-edge positions in software development',
-      path: '/job-recommendations'
+      title: "Tech Opportunities",
+      description: "Discover cutting-edge positions in software development",
+      path: "/job-recommendations",
     },
   ];
 
@@ -53,7 +63,7 @@ export default function FeaturesPage() {
             Developer Tools
           </h1>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
@@ -61,10 +71,7 @@ export default function FeaturesPage() {
         </div>
 
         <div className="flex justify-center">
-          <button
-            onClick={() => navigate('/')}
-            className="btn-secondary"
-          >
+          <button onClick={() => navigate("/")} className="btn-secondary">
             Start Over
           </button>
         </div>
