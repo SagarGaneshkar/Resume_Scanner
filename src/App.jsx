@@ -5,7 +5,7 @@ import FeaturesPage from "./pages/FeaturesPage.jsx";
 import ResultsPage from "./pages/ResultsPage.jsx";
 import JobDescriptionMatcher from "./pages/JobDescriptionMatcher.jsx";
 import JobRecommendations from "./pages/JobRecommendations.jsx";
-import { ResumeProvider } from "./context/ResumeContext.js";
+import { ResumeProvider } from "./context/ResumeContext.jsx";
 import JobMatcher from "./pages/JobMatcher.jsx";
 
 function App() {
